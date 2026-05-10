@@ -12,6 +12,8 @@ pipeline {
                 - sleep
                 args:
                 - 99d
+                securityContext:
+                  runAsUser: 0
               serviceAccountName: jenkins-agent
             '''
         }
